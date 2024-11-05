@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ProgressBar Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#474747"/> <!-- 배경 색상 -->
+        </shape>
+    </item>
+
+    <item android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <size android:height="1dp" />
+            <solid android:color="#2A2A2A" /> <!-- 선의 색상 -->
+        </shape>
+    </item>
+
+</layer-list>

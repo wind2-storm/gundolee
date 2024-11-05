@@ -1,47 +1,36 @@
 package com.example.widget
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.widget.ui.theme.WidgetTheme
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            WidgetTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+class MainActivity : AppCompatActivity() {
+
+    // Activity 결과를 받을 콜백 등록
+    private val subActivityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == RESULT_OK) {
+            val returnedData = result.data?.getStringExtra("resultData")
+//            Toast.makeText(this, "SubActivity에서 받은 값: $returnedData", Toast.LENGTH_LONG).show()
         }
     }
-}
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        findViewById<ConstraintLayout>(R.id.setting1).setOnClickListener {
+            val intent = Intent(this, Setting1Activity::class.java)
+            subActivityResultLauncher.launch(intent)
+        }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    WidgetTheme {
-        Greeting("Android")
+        findViewById<ConstraintLayout>(R.id.setting2).setOnClickListener {
+            val intent = Intent(this, Setting2Activity::class.java)
+            subActivityResultLauncher.launch(intent)
+        }
     }
 }

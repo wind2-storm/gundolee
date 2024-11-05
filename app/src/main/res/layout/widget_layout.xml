@@ -1,66 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#3B2F2F"
-    android:padding="8dp">
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/img"
-            />
+            android:src="@drawable/img" />
 
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="김철수"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:layout_weight="1" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
         android:orientation="vertical"
-        android:gravity="center_vertical"
         android:paddingTop="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/tv_percentage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/pretendardsemibold"
+                android:paddingBottom="4dp"
                 android:text="15%"
                 android:textColor="#BFE9D7"
-                android:textSize="16sp"
-                android:paddingBottom="4dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/pretendardsemibold"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_d_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/pretendardsemibold"
+                android:gravity="end"
                 android:text="D-213"
                 android:textColor="#F7F7F7"
-                android:textSize="14sp"
-                android:layout_weight="1"
-                android:gravity="end"
-                android:fontFamily="@font/pretendardsemibold" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <ProgressBar
@@ -68,8 +67,8 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="16dp"
-            android:progress="40"
             android:max="100"
+            android:progress="40"
             android:progressDrawable="@drawable/rounded_progress_bar" />
     </LinearLayout>
 </LinearLayout>

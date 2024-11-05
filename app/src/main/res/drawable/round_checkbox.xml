@@ -1,0 +1,26 @@
+<!-- res/drawable/round_checkbox.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <!-- 24dp의 배경색 원 -->
+            <item android:width="24dp" android:height="24dp">
+                <shape android:shape="oval">
+                    <solid android:color="#3FB382"/> <!-- 배경색: 원하는 색상으로 변경 -->
+                </shape>
+            </item>
+            <!-- 안쪽 10dp의 흰색 원 -->
+            <item android:width="12dp" android:height="12dp" android:gravity="center">
+                <shape android:shape="oval">
+                    <solid android:color="@android:color/white"/> <!-- 안쪽 원 색상 -->
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" />
+            <size android:width="24dp" android:height="24dp" />
+            <stroke android:width="2dp" android:color="@android:color/darker_gray" />
+        </shape>
+    </item>
+</selector>

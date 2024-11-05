@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="320dp"
-    android:layout_height="200dp"
-    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
     android:orientation="vertical"
     android:padding="20dp">
 
@@ -19,7 +19,7 @@
             android:fontFamily="@font/pretendardsemibold"
             android:paddingEnd="4dp"
             android:text="점심"
-            android:textColor="#171717"
+            android:textColor="@color/textColor"
             android:textSize="20sp" />
 
         <TextView
@@ -67,7 +67,7 @@
                 android:fontFamily="@font/pretendardregular"
                 android:maxLines="1"
                 android:text="김치볶음밥(완)"
-                android:textColor="#171717"
+                android:textColor="@color/textColor"
                 android:textSize="15sp" />
 
             <TextView
@@ -78,7 +78,7 @@
                 android:fontFamily="@font/pretendardregular"
                 android:maxLines="1"
                 android:text="유부장국"
-                android:textColor="#171717"
+                android:textColor="@color/textColor"
                 android:textSize="15sp" />
 
             <TextView
@@ -89,7 +89,7 @@
                 android:fontFamily="@font/pretendardregular"
                 android:maxLines="1"
                 android:text="야채비빔만두"
-                android:textColor="#FF4242"
+                android:textColor="@color/textColorRed"
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -114,7 +114,7 @@
                 android:fontFamily="@font/pretendardregular"
                 android:maxLines="1"
                 android:text="김치볶음밥(완)"
-                android:textColor="#171717"
+                android:textColor="@color/textColor"
                 android:textSize="15sp" />
 
             <TextView
@@ -125,7 +125,7 @@
                 android:fontFamily="@font/pretendardregular"
                 android:maxLines="1"
                 android:text="백김치"
-                android:textColor="#171717"
+                android:textColor="@color/textColor"
                 android:textSize="15sp" />
 
             <TextView
@@ -136,7 +136,7 @@
                 android:fontFamily="@font/pretendardregular"
                 android:maxLines="1"
                 android:text="채소스틱(오이,양파,당근,시금치,브로콜리,파프리카"
-                android:textColor="#171717"
+                android:textColor="@color/textColor"
                 android:textSize="15sp" />
 
         </LinearLayout>

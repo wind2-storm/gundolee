@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="textColor">#F7F7F7</color> <!-- 화이트 텍스트 -->
+    <color name="textColor2">#C4C4C4</color> <!-- 화이트 텍스트 -->
+    <color name="textColorRed">#E52222</color>
+    <color name="background">#2A2A2A</color>
+</resources>
